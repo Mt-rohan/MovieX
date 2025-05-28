@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[User, Insert Your App Name Here]</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Blurred backdrop image -->
+  <div id="backdrop"></div>
+
+  <header>
+    <h1>MovieX</h1>
+    <p>Your gateway to hidden cinematic gems</p>
+  </header>
+
+  <main>
+    <!-- Genre Filters -->
+    <div id="filter-container">
+      <button class="filter-btn active" data-genre="all">All Gems</button>
+      <button class="filter-btn" data-genre="Action">Action</button>
+      <button class="filter-btn" data-genre="Thriller">Thriller</button>
+      <button class="filter-btn" data-genre="Drama">Drama</button>
+      <button class="filter-btn" data-genre="Comedy">Comedy</button>
+    </div>
+
+    <!-- Main Action Buttons -->
+    <div id="main-actions">
+      <button id="find-movie-btn">Find a Movie Now</button>
+      <button id="seen-it-btn">Seen It? Try Another!</button>
+      <button id="view-favorites-btn">My Favorites</button>
+      <button id="smart-recs-btn">Get Smart Recs</button>
+    </div>
+
+    <!-- 📊 Preferences Panel (Glassmorphic Card) -->
+    <div id="preferences-panel" class="prefs-card">
+      <div class="prefs-title">Refine Your Taste</div>
+
+      <div class="prefs-item">
+        <label for="pacing-select" class="prefs-label">Pacing</label>
+        <select id="pacing-select" class="prefs-select">
+          <option value="fast">Fast</option>
+          <option value="medium" selected>Medium</option>
+          <option value="slow">Slow</option>
+        </select>
+      </div>
+
+      <div class="prefs-item">
+        <span class="prefs-label">Mood</span>
+        <div class="prefs-options">
+          <div class="prefs-option">
+            <input type="checkbox" id="mood-adventurous" class="mood-checkbox" value="adventurous" />
+            <label for="mood-adventurous">Adventurous</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="mood-nostalgic" class="mood-checkbox" value="nostalgic" />
+            <label for="mood-nostalgic">Nostalgic</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="mood-chill" class="mood-checkbox" value="chill" />
+            <label for="mood-chill">Chill</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="mood-emotional" class="mood-checkbox" value="emotional" />
+            <label for="mood-emotional">Emotional</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="prefs-item">
+        <span class="prefs-label">Tags</span>
+        <div class="prefs-options">
+          <div class="prefs-option">
+            <input type="checkbox" id="tag-spy" class="tag-checkbox" value="spy" />
+            <label for="tag-spy">Spy</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="tag-music" class="tag-checkbox" value="music" />
+            <label for="tag-music">Music</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="tag-space" class="tag-checkbox" value="space" />
+            <label for="tag-space">Space</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="tag-heist" class="tag-checkbox" value="heist" />
+            <label for="tag-heist">Heist</label>
+          </div>
+          <div class="prefs-option">
+            <input type="checkbox" id="tag-horror" class="tag-checkbox" value="horror" />
+            <label for="tag-horror">Horror</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Taste Preset Save/Load -->
+      <div class="prefs-item">
+        <label for="preset-name" class="prefs-label">Save This Taste</label>
+        <input type="text" id="preset-name" placeholder="e.g. Late Night Action" class="prefs-select" />
+        <button id="save-preset-btn" class="trailer-btn" style="margin-top: 0.5rem;">Save</button>
+      </div>
+
+      <div class="prefs-item">
+        <label for="load-preset" class="prefs-label">Load Saved Taste</label>
+        <select id="load-preset" class="prefs-select">
+          <option value="">-- Select a saved taste --</option>
+        </select>
+      </div>
+      <button id="delete-preset-btn" class="trailer-btn" style="margin-top: 0.5rem;">Delete</button>
+    </div>
+
+    <!-- Movie Recommendation Area -->
+    <div id="movie-recommendation-area">
+      <!-- Movie cards will be injected here -->
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 MovieX. All rights reserved.
+  </footer>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
